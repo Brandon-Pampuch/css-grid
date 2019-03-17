@@ -21,7 +21,15 @@
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
-      grid-template-columns: repeat(auto-fill, 150px);
+      /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+      /* at 100 pixels bonjour will spill out, so set minmax to 150 min 1fr max */
+      /* start to stack as soon as one can not fit at 150 */
+      
+      
+      
+      /* grid-template-columns: auto 150px 150px 150px; */
+      grid-template-columns: fit-content(100px) 150px 150px 150px;
+      /* puts a clamp on the auto leaving extra space */
     }
   </style>
 </body>

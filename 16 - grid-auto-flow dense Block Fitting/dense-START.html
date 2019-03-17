@@ -86,7 +86,29 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: repeat(10, 1fr);
+      grid-auto-flow: dense;
+      /* will wrap all the blocks into one */
     }
+
+    .item:nth-child(6n){
+      background: cornflowerblue;
+      grid-column: span 6;
+      /* leaves blank spots that don't fit on first row */
+    }
+
+    .item:nth-child(8n){
+      background: tomato;
+      grid-column: span 2;
+    }
+
+    .item18{
+      background-attachment: #bada55 !important;
+      grid-column-end: -1 !important;
+    }
+    /* will put grid where it needs to be and the wrap with auto flow */
+
+
   </style>
 </body>
 

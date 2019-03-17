@@ -11,7 +11,7 @@
 <body>
   <div class="container">
     <div class="item">1</div>
-    <div class="item">2</div>
+    <div class="item">Brandon is cool</div>
     <div class="item">3</div>
     <div class="item">4</div>
     <div class="item">5</div>
@@ -30,7 +30,16 @@
   <style>
     .container {
       display: grid;
+      /* height: 400px; */
       grid-gap: 20px;
+      border: 20px solid var(--yellow);
+      grid-template-columns: 200px 200px;
+      /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+      /* fr equals how much free space that is left (fractional units, free space) */
+      /* grid-template-rows: 1fr 10fr 1fr 1fr; */
+      /* does nothing because like block elements it only takes content size if height is added will grow*/
+      grid-template-columns: auto 1fr auto 1fr;
+      /* grid not pintrest / auto will stretch other items to the largest ones content */
     }
   </style>
 </body>

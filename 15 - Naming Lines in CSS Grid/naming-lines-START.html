@@ -42,13 +42,46 @@
     <div class="item item30">30</div>
   </div>
 
-  <style>
+  <!-- <style>
+    NAMING AREAS
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: 1fr 500px 1fr;
-      grid-template-rows: repeat(10, auto);
+      grid-template-areas:"dog dog dog dog cat cat cat cat"
+                          "dog dog dog dog cat cat cat cat"
+                          "dog dog dog dog cat cat cat cat"
+                          "dog dog dog dog cat cat cat cat"
+                 
+    } -->
+
+    <!-- .item3 {
+      /* grid-area: dog; */
+      
+      /* grid-column: 2 / 5 */
+
+      grid-column: dog-start / cat-end;
+      /* can also use row names to define content, ex could use grid-row-end: dog-end to fill last row, implicit will tack on to the end*/
+    } -->
+<!-- 
+    NAMING LINES -->
+
+    <style>
+        .container {
+          display: grid;
+          grid-gap: 20px;
+          grid-template-columns: [sidebar-start site-left] 1fr [sidebar-end content-start] 500px [content-end] 1fr [site-right];
+          grid-template-rows: [content-top] repeat(10, auto) [content-bottom];
+          /* use square brackets when defining columns to name them */
+          /* can assign mulitple names to lines */
+        }
+
+        .item3 {
+      background: slateblue;
+      grid-column: content-start;
+      grid-row: content-top / content-bottom;
+      /* grid-row: 1 / span 10; */
     }
+
   </style>
 </body>
 
